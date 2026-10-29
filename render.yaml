@@ -1,0 +1,14 @@
+# Render Blueprint: statisk nettside bygget med Vite (gratis «Static Site»).
+services:
+  - type: web
+    name: motell69
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    autoDeploy: true
+    pullRequestPreviewsEnabled: false
+    # Spillet har bare én side; alt annet sendes til index.html
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

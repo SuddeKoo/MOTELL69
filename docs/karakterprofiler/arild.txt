@@ -1,0 +1,22 @@
+# Arild Åsbakk
+
+ID: arild
+Original arketype: arild
+Hjemsted i originalspillet: Tromsø
+Original idle-animasjon: sway
+Originale startverdier: nervøsitet=5, irritasjon=30, glede=0. Dette er spillparametere, IKKE en fullstendig personlighet.
+
+## Kilde til den faktiske karakteren
+- src/data/characters.js: navn, look (utseende), anim, voice, traits.
+- src/ui/Portrait.js: selve SVG-tegningen.
+- src/data/dialogueBanks.js + src/data/dialogueExpansion.js: original talemåte og replikker.
+- src/systems/DialogueEngine.js: dialoglogikken.
+
+Originale replikkeksempler finnes i src/data/dialogueBanks.js og src/data/dialogueExpansion.js. Eksempel fra original greet-bank: Ja. Hei. Kan vi gjøre dette fort? / God kveld, antar æ.
+
+## Nye KIOSK69-replikker (FORSLAG, ikke originale eller kanoniske)
+- «E det mulig å få kvittering uten at heile butikken får vite ka æ kjøpte?»
+- «Du, scanneren din pip litt høyt. Bare så du vet det.»
+
+## Oppdrag til Claude
+Studer originale dialogbanker før du utvider denne karakteren. Behold originalt utseende og språkføring. Skriv flere unike kioskbestillinger, køkommentarer og reaksjoner på feil scanning, ventetid og betaling. Ikke anta at eksemplene over er hentet fra originalspillet. Sørg for at karakteren er kunde, aldri ansatt.

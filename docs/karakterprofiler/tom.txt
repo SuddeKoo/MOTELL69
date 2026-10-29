@@ -1,0 +1,22 @@
+# Tom Andreasen
+
+ID: tom
+Original arketype: tom
+Hjemsted i originalspillet: Alta
+Original idle-animasjon: lean
+Originale startverdier: nervøsitet=0, irritasjon=15, glede=20. Dette er spillparametere, IKKE en fullstendig personlighet.
+
+## Kilde til den faktiske karakteren
+- src/data/characters.js: navn, look (utseende), anim, voice, traits.
+- src/ui/Portrait.js: selve SVG-tegningen.
+- src/data/dialogueBanks.js + src/data/dialogueExpansion.js: original talemåte og replikker.
+- src/systems/DialogueEngine.js: dialoglogikken.
+
+Originale replikkeksempler finnes i src/data/dialogueBanks.js og src/data/dialogueExpansion.js. Eksempel fra original greet-bank: HEI! Tom her! / GOD KVELD! Ska vi kjøre?
+
+## Nye KIOSK69-replikker (FORSLAG, ikke originale eller kanoniske)
+- «Har dokker nåkka mat som faktisk metta, eller e det bare pynt i hyllan?»
+- «Æ tar to. Nei, tre. Det der va mindre enn æ trudde.»
+
+## Oppdrag til Claude
+Studer originale dialogbanker før du utvider denne karakteren. Behold originalt utseende og språkføring. Skriv flere unike kioskbestillinger, køkommentarer og reaksjoner på feil scanning, ventetid og betaling. Ikke anta at eksemplene over er hentet fra originalspillet. Sørg for at karakteren er kunde, aldri ansatt.

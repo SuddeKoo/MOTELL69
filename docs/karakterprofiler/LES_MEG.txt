@@ -1,0 +1,45 @@
+# KARAKTERER: FORKLARING TIL CLAUDE
+
+Det finnes 30 karakterprofiler her, én .txt per karakter. Profilene skal ligge ved siden av original_grensevakta-mappen, og er hjelpefiler, ikke spillmotor.
+
+VIKTIG: Karakterene er IKKE primært separate PNG-bilder!
+- `original_grensevakta/src/data/characters.js` har figurens data og look-parametere.
+- `original_grensevakta/src/ui/Portrait.js` tegner figurene programmatisk som SVG (2D-vektorgrafikk).
+- `original_grensevakta/src/data/dialogueBanks.js` og `dialogueExpansion.js` inneholder originalreplikker.
+- Animasjonsoppførsel finnes som data (`anim`) og kode som bruker dem; det er ikke nødvendigvis separate gif-filer.
+
+Hver profil har originalnavn, ID, animasjonstype, humørtall og referanser. De NYE kioskreplikkene er forslag jeg har skrevet og er ikke hentet fra spillet. Originaldialogene er fasit for stemmen/personligheten. Ikke kopier grensevakt-spørsmål inn i kiosken.
+
+MÅL: Bygg gjenbrukbar karakterrenderer med samtlige 30, støtt kø fra venstre, hovedkunde ved kassa og 2D-perspektiver (A/D + piler). Test at figurene faktisk vises. Ved tvil: vis originalkode og dokumenter manglende støtte.
+
+## Register
+- Ron Walter Knutsen → KARAKTERER/ron.txt
+- Tom Andreasen → KARAKTERER/tom.txt
+- Arild Åsbakk → KARAKTERER/arild.txt
+- Daniel Holand → KARAKTERER/daniel.txt
+- Adrian Bror → KARAKTERER/adrian.txt
+- Konrad Børli → KARAKTERER/konrad.txt
+- Jacob Anthon Zen → KARAKTERER/jacob.txt
+- Vebjørn Arve Laksosnes → KARAKTERER/vebjorn.txt
+- Birger-Johan Esjeholm Jacobsen → KARAKTERER/birger.txt
+- Sondre Karlsen → KARAKTERER/sondre.txt
+- Einar Abel Prestegård Aars → KARAKTERER/einar.txt
+- Marie Edvardsen Løkaas → KARAKTERER/marie.txt
+- Leo Brumoen Steinlein → KARAKTERER/leo.txt
+- Ylva-Li Olsen Søfting → KARAKTERER/ylva.txt
+- Salha Farrik Abdulkahar → KARAKTERER/salha.txt
+- Ella-Sofi Lunde Limstrand → KARAKTERER/ella.txt
+- Liam Emil Solem-Solstad → KARAKTERER/liam.txt
+- Matheo Jul Schrøder Bråttvik → KARAKTERER/matheo.txt
+- Thea Aurora Wikerholmen → KARAKTERER/theaa.txt
+- Cassandra Strand Hansen → KARAKTERER/cassandra.txt
+- Emilie Bjerk → KARAKTERER/emilie.txt
+- Aleksander Ingebrigtsen → KARAKTERER/aleksander.txt
+- Martin Oleander Sakariassen → KARAKTERER/martin.txt
+- Julia Hildal Molin → KARAKTERER/julia.txt
+- Thea Sofie Røsnes Holtmo → KARAKTERER/theas.txt
+- Hassan Gill → KARAKTERER/hassan.txt
+- Lina Elise Olsen Urud → KARAKTERER/lina.txt
+- Eskil Jøed Valdal → KARAKTERER/eskil.txt
+- Sigvart Vassbotn → KARAKTERER/sigvart.txt
+- Sakarias Vassbotn → KARAKTERER/sakarias.txt

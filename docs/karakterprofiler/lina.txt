@@ -1,0 +1,22 @@
+# Lina Elise Olsen Urud
+
+ID: lina
+Original arketype: lina
+Hjemsted i originalspillet: Kirkenes
+Original idle-animasjon: confident
+Originale startverdier: nervøsitet=5, irritasjon=15, glede=55. Dette er spillparametere, IKKE en fullstendig personlighet.
+
+## Kilde til den faktiske karakteren
+- src/data/characters.js: navn, look (utseende), anim, voice, traits.
+- src/ui/Portrait.js: selve SVG-tegningen.
+- src/data/dialogueBanks.js + src/data/dialogueExpansion.js: original talemåte og replikker.
+- src/systems/DialogueEngine.js: dialoglogikken.
+
+Originale replikkeksempler finnes i src/data/dialogueBanks.js og src/data/dialogueExpansion.js.
+
+## Nye KIOSK69-replikker (FORSLAG, ikke originale eller kanoniske)
+- «Unnskyld, men den der isen ser faktisk helt tragisk ut.»
+- «Æ ombestemte mæ. Kan du ta bort chipsen? Og legg den på igjen.»
+
+## Oppdrag til Claude
+Studer originale dialogbanker før du utvider denne karakteren. Behold originalt utseende og språkføring. Skriv flere unike kioskbestillinger, køkommentarer og reaksjoner på feil scanning, ventetid og betaling. Ikke anta at eksemplene over er hentet fra originalspillet. Sørg for at karakteren er kunde, aldri ansatt.

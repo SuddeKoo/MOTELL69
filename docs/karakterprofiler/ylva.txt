@@ -1,0 +1,22 @@
+# Ylva-Li Olsen Søfting
+
+ID: ylva
+Original arketype: cute
+Hjemsted i originalspillet: Tromsø
+Original idle-animasjon: shy
+Originale startverdier: nervøsitet=15, irritasjon=0, glede=50. Dette er spillparametere, IKKE en fullstendig personlighet.
+
+## Kilde til den faktiske karakteren
+- src/data/characters.js: navn, look (utseende), anim, voice, traits.
+- src/ui/Portrait.js: selve SVG-tegningen.
+- src/data/dialogueBanks.js + src/data/dialogueExpansion.js: original talemåte og replikker.
+- src/systems/DialogueEngine.js: dialoglogikken.
+
+Originale replikkeksempler finnes i src/data/dialogueBanks.js og src/data/dialogueExpansion.js. Eksempel fra original greet-bank: Haii! Hei hei! / Heisann! Du ser så varm og god ut der inne!
+
+## Nye KIOSK69-replikker (FORSLAG, ikke originale eller kanoniske)
+- «Jøss, har dokker fått nye iska? Æ tar en!»
+- «Her va det jo trivelig! Bortsett fra køa, da.»
+
+## Oppdrag til Claude
+Studer originale dialogbanker før du utvider denne karakteren. Behold originalt utseende og språkføring. Skriv flere unike kioskbestillinger, køkommentarer og reaksjoner på feil scanning, ventetid og betaling. Ikke anta at eksemplene over er hentet fra originalspillet. Sørg for at karakteren er kunde, aldri ansatt.

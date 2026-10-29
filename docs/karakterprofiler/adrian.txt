@@ -1,0 +1,22 @@
+# Adrian Bror
+
+ID: adrian
+Original arketype: adrian
+Hjemsted i originalspillet: Narvik
+Original idle-animasjon: wide
+Originale startverdier: nervøsitet=0, irritasjon=10, glede=10. Dette er spillparametere, IKKE en fullstendig personlighet.
+
+## Kilde til den faktiske karakteren
+- src/data/characters.js: navn, look (utseende), anim, voice, traits.
+- src/ui/Portrait.js: selve SVG-tegningen.
+- src/data/dialogueBanks.js + src/data/dialogueExpansion.js: original talemåte og replikker.
+- src/systems/DialogueEngine.js: dialoglogikken.
+
+Originale replikkeksempler finnes i src/data/dialogueBanks.js og src/data/dialogueExpansion.js. Eksempel fra original greet-bank: Bror. / *ser deg inn i sjela* Kveld, bror.
+
+## Nye KIOSK69-replikker (FORSLAG, ikke originale eller kanoniske)
+- «Æ ska bare ha en brus. Det treng ikkje bli et avhør.»
+- «Ka e det du ser på? Æ står jo bare her og vente.»
+
+## Oppdrag til Claude
+Studer originale dialogbanker før du utvider denne karakteren. Behold originalt utseende og språkføring. Skriv flere unike kioskbestillinger, køkommentarer og reaksjoner på feil scanning, ventetid og betaling. Ikke anta at eksemplene over er hentet fra originalspillet. Sørg for at karakteren er kunde, aldri ansatt.

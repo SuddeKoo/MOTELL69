@@ -1,0 +1,22 @@
+# Sigvart Vassbotn
+
+ID: sigvart
+Original arketype: sigvart
+Hjemsted i originalspillet: Lyngseidet
+Original idle-animasjon: shy
+Originale startverdier: nervøsitet=30, irritasjon=0, glede=15. Dette er spillparametere, IKKE en fullstendig personlighet.
+
+## Kilde til den faktiske karakteren
+- src/data/characters.js: navn, look (utseende), anim, voice, traits.
+- src/ui/Portrait.js: selve SVG-tegningen.
+- src/data/dialogueBanks.js + src/data/dialogueExpansion.js: original talemåte og replikker.
+- src/systems/DialogueEngine.js: dialoglogikken.
+
+Originale replikkeksempler finnes i src/data/dialogueBanks.js og src/data/dialogueExpansion.js.
+
+## Nye KIOSK69-replikker (FORSLAG, ikke originale eller kanoniske)
+- «Unnskyld, æ trur kanskje æ la feil vare på disken.»
+- «E det greit om æ betale med kort? Æ har litt lite kontanta.»
+
+## Oppdrag til Claude
+Studer originale dialogbanker før du utvider denne karakteren. Behold originalt utseende og språkføring. Skriv flere unike kioskbestillinger, køkommentarer og reaksjoner på feil scanning, ventetid og betaling. Ikke anta at eksemplene over er hentet fra originalspillet. Sørg for at karakteren er kunde, aldri ansatt.

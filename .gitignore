@@ -1,0 +1,15 @@
+# Avhengigheter og bygg
+node_modules/
+dist/
+
+# Lokale filer, logger og hemmeligheter
+.claude/
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+.env
+.env.*
+*.local
+.DS_Store
+Thumbs.db

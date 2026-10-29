@@ -1,0 +1,22 @@
+# Martin Oleander Sakariassen
+
+ID: martin
+Original arketype: sleepy
+Hjemsted i originalspillet: Lakselv
+Original idle-animasjon: sway
+Originale startverdier: nervøsitet=0, irritasjon=5, glede=20. Dette er spillparametere, IKKE en fullstendig personlighet.
+
+## Kilde til den faktiske karakteren
+- src/data/characters.js: navn, look (utseende), anim, voice, traits.
+- src/ui/Portrait.js: selve SVG-tegningen.
+- src/data/dialogueBanks.js + src/data/dialogueExpansion.js: original talemåte og replikker.
+- src/systems/DialogueEngine.js: dialoglogikken.
+
+Originale replikkeksempler finnes i src/data/dialogueBanks.js og src/data/dialogueExpansion.js. Eksempel fra original greet-bank: *gjesp* ...kveld. / Hei... e det her æ ska stå?
+
+## Nye KIOSK69-replikker (FORSLAG, ikke originale eller kanoniske)
+- «Du, har dokker kaffe igjen, eller e det tomt?»
+- «Æ ska ha den der brusen og en pose chips, takk.»
+
+## Oppdrag til Claude
+Studer originale dialogbanker før du utvider denne karakteren. Behold originalt utseende og språkføring. Skriv flere unike kioskbestillinger, køkommentarer og reaksjoner på feil scanning, ventetid og betaling. Ikke anta at eksemplene over er hentet fra originalspillet. Sørg for at karakteren er kunde, aldri ansatt.

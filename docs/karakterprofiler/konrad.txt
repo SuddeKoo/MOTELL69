@@ -1,0 +1,22 @@
+# Konrad Børli
+
+ID: konrad
+Original arketype: konrad
+Hjemsted i originalspillet: Finnsnes
+Original idle-animasjon: dart
+Originale startverdier: nervøsitet=35, irritasjon=0, glede=5. Dette er spillparametere, IKKE en fullstendig personlighet.
+
+## Kilde til den faktiske karakteren
+- src/data/characters.js: navn, look (utseende), anim, voice, traits.
+- src/ui/Portrait.js: selve SVG-tegningen.
+- src/data/dialogueBanks.js + src/data/dialogueExpansion.js: original talemåte og replikker.
+- src/systems/DialogueEngine.js: dialoglogikken.
+
+Originale replikkeksempler finnes i src/data/dialogueBanks.js og src/data/dialogueExpansion.js. Eksempel fra original greet-bank: G-god kveld. Æ ska bare en rask tur over grensa. / Hei! Hei. Helt vanlig kveld. For mæ. Ingenting spesielt.
+
+## Nye KIOSK69-replikker (FORSLAG, ikke originale eller kanoniske)
+- «Unnskyld, æ trur kanskje kortet mitt ikkje virke. Eller så trykte æ feil.»
+- «Du kan ta ho bak mæ først, æ må bare sjekk saldoen en gang til.»
+
+## Oppdrag til Claude
+Studer originale dialogbanker før du utvider denne karakteren. Behold originalt utseende og språkføring. Skriv flere unike kioskbestillinger, køkommentarer og reaksjoner på feil scanning, ventetid og betaling. Ikke anta at eksemplene over er hentet fra originalspillet. Sørg for at karakteren er kunde, aldri ansatt.

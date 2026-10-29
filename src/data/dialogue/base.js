@@ -1,0 +1,161 @@
+// MOTELL69 – felles replikkbank (nordnorsk, muntlig). Alle replikker er skrevet nye for motellet.
+// Oppslag: CAST[id][nøkkel] → ARCH[arketype][nøkkel] → BASE[nøkkel].
+// Tokens: {name} {first} {room} {other} {type} {price} {nights} {time} {booker} {item} {wish}
+
+export const BASE = {
+  // ── Ankomst ──
+  arrive_res: ['Hei. Æ har et rom bestilt. {name}.', 'Kveld. Det skal stå et rom på {name}.', 'Hei hei. {name}, æ har bestilt.'],
+  arrive_walkin: ['Hei. Har dokker et ledig rom i natt?', 'Kveld. E det nåkka ledig her?', 'Hei. Æ trenger et rom. Bare i natt.'],
+  arrive_short: ['Hei. Æ trenger bare et rom noen timer. Æ kjøre videre i morra tidlig.', 'Kan æ få et rom bare et par timer? Æ e så trøtt at æ ser dobbelt.'],
+  want_type: ['{type}, hvis dokker har.', 'Helst {type}.'],
+  wish_quiet: ['Og helst et rolig rom. Æ sove lett.', 'Ikkje nåkka rom mot veien, takk.'],
+  wish_near: ['Helst nært her. Æ orke ikkje trappa.', 'Et rom i første, nær resepsjonen, om det går.'],
+  wish_view: ['Har dokker nåkka med utsikt?', 'Gjerne et rom med utsikt. Om det e nåkka å se på her.'],
+  wish_cheap: ['Det billigste dokker har.', 'Ka e det billigste? Det tar æ.'],
+  wish_large: ['Æ vil gjerne ha litt plass. Ikkje en kott.', 'Et av de større romman, takk.'],
+  wish_none: ['Det spelle ingen rolle ka rom.', 'Bare et rom med seng, så e æ fornøyd.'],
+  restate: ['Som sagt: {type}. {wish}', 'Æ sa {type}. Og helst {wish}.'],
+  // ── Reservasjon ──
+  wrong_res: ['Nei, det der e ikkje mæ.', 'Hæ? Det e ikkje mitt navn.'],
+  res_found: ['Ja, det e mæ.', 'Der ja. Det stemme.'],
+  res_found_sleepy: ['Eh… ja. Det e mæ. Æ sa nok feil.'],
+  booker_explain: ['Det va {booker} som bestilte for mæ. Det står nok på det navnet.', 'Æ trur {booker} bestilte. Sjekk på det navnet.'],
+  // ── Legitimasjon ──
+  id_give: ['Her.', 'Værsågod.', 'Her e legitimasjonen.'],
+  id_forgot: ['Å nei. Lommeboka ligg i bilen.', 'Æ har glømt legitimasjonen. Den ligg i jakka i bilen.'],
+  id_fetch: ['Greit, æ springe ut og hente den.', 'Ja ja. Æ hente den. Det e minus tjue der ute.'],
+  id_back: ['Her. Æ fant den under setet.', 'Her e den. Æ frøs fast i bildøra.'],
+  id_trust: ['Takk. Det e ikkje alle som stole på folk lenger.', 'Takk ska du ha.'],
+  id_refused: ['Ja vel. Da kjøre æ videre.', 'Seriøst? Æ har jo bestilt!'],
+  ask_normal: ['Ka mener du? Det e jo mæ.', 'Det e mæ. Se på nesa.'],
+  ask_other_booker: ['Ja, det va {booker} som bestilte. Rommet e til mæ.'],
+  ask_old_photo: ['Det bildet e gammelt. Æ hadde annen sveis da.', 'Det e mæ, det. Bare yngre og dummere.'],
+  ask_wrong_name: ['Å, unnskyld. Æ sa feil. Det e navnet på kortet som gjelder.', 'Æ e så trøtt at æ glømme kem æ e.'],
+  impostor_bluff: ['Eh… det e kallenavnet mitt. Alle kalle mæ {name}.', 'Det kortet e… lånt. Nei! Æ mener… det e mæ.'],
+  impostor_caught: ['Ja ja. Det va verdt et forsøk.', 'Okei, okei. Æ går.'],
+  impostor_conflict: ['Ka mener du, sjekka inn? Æ har jo ikkje vært her!', 'Det står at æ allerede bor her? Kem har tatt rommet mitt?!'],
+  // ── Rom og betaling ──
+  room_given: ['Rom {room}. Fint.', '{room}. Det huske æ.'],
+  type_down: ['Det her e jo ikkje {type}. Det va det æ bestilte.', 'Æ bestilte {type}. Det her e mindre.'],
+  type_up: ['Oi! Større rom? Takk!', 'Det her e bedre enn æ bestilte. Takk!'],
+  price: ['{price}. Ja vel.', '{price} kroner. Det e greit.'],
+  haggle: ['{price}? Kan vi si litt mindre?'],
+  discount_yes: ['Takk. Det sette æ pris på.'],
+  discount_no: ['Ja ja. Fast pris. Æ hørte det.'],
+  pay_done: ['Sånn.', 'Betalt.'],
+  key_wrong: ['Det her e nøkkel til {other}. Æ skulle ha {room}?', 'Feil nøkkel. Det står {other} på den.'],
+  key_early: ['Æ har ikkje fått betalt ennå.', 'Ska æ ikkje betale først?'],
+  key_noroom: ['Ka rom ska æ ha, egentlig?'],
+  key_thanks: ['Takk. God natt.', 'Takk ska du ha.', 'Da finn æ senga. God natt.'],
+  wish_met: ['Akkurat sånn æ ville ha det.', 'Perfekt.'],
+  wish_missed: ['Det va ikkje helt det æ ba om, men ok.', 'Hm. Ikkje akkurat ka æ ønska.'],
+  wake_ask: ['Kan du vekke mæ klokka {time}?', 'Du, kan æ få vekking {time}?'],
+  wake_ok: ['Takk. Æ stole på dæ.'],
+  wake_no: ['Ja vel. Da får æ stole på telefonen. Den e død.'],
+  // ── Venting ──
+  wait_1: ['Det tar si tid, det her.', 'Går det framover, eller?'],
+  wait_2: ['Æ har stått her lenge nu.', 'Hallo? Æ venta fortsatt.'],
+  calm: ['Ja ja. Æ vente.', 'Greit. Ta den tida du treng.'],
+  leave_wait: ['Nei, nu kjøre æ videre. Det e et motell til i Bardufoss.', 'Glem det. Æ sove i bilen.'],
+  leave_full: ['Fullt? Ja ja. Da blir det bilen.', 'Okei. Takk likevel.'],
+  turned_away: ['Ja vel. Ha en fin natt du òg.', 'Hyggelig sted dokker har.'],
+  // ── Utsjekking ──
+  checkout_hello: ['Æ ska sjekke ut. Rom {room}.', 'Morn. Utsjekking fra {room}.', 'Hei. Her e nøkkelen til {room}. Æ e ferdig.'],
+  checkout_good: ['Fin natt. Æ kommer igjen.', 'Takk for oppholdet. Det va bra.'],
+  checkout_ok: ['Ja, det gikk greit.', 'Takk for nu.'],
+  checkout_bad: ['Æ kommer ikkje tilbake.', 'Det her blir en dårlig anmeldelse.'],
+  checkout_wait: ['Æ legg nøkkelen her. Æ har ikkje tid til å vente.'],
+  mem_moved: ['Takk for at æ fikk bytte rom.'],
+  mem_fixed: ['Og takk for at du ordna det med rommet.'],
+  mem_ignored: ['Ingen tok telefonen da æ ringte. Bare så du vet.'],
+  mem_promise: ['Du lova mæ nytt rom. Det kom aldri.'],
+  mem_wake_ok: ['Takk for vekkinga.'],
+  mem_wake_missed: ['Ingen vekka mæ. Æ har forsovet mæ.'],
+  mem_noise: ['Naboen bråka hele natta.'],
+  mem_cold: ['Rommet va iskaldt.'],
+  mem_upgrade: ['Takk for det store rommet.'],
+  mem_downgrade: ['Æ fikk ikkje rommet æ bestilte.'],
+  mem_wish: ['Rommet va akkurat som æ ville.'],
+  mem_errand: ['Og takk for dyna. Den redda natta.'],
+  // ── Telefon ──
+  phone_hello: ['Hallo? Det e {first} på rom {room}.', 'Hei, det e rom {room}.'],
+  c_noise: ['Det e nån på {other} som bråke. Æ får ikkje sove.', 'Naboen på {other} har fest. Kan du gjøre nåkka?'],
+  c_cold: ['Det e iskaldt på rommet. Radiatoren e død.', 'Æ fryse. Kan dokker skru opp varmen?'],
+  c_broken: ['{item} virke ikkje.', 'Du, {item} e ødelagt.'],
+  req_item: ['Kan æ få {item} på rommet?', 'Har dokker {item}? Æ trenger det.'],
+  req_move: ['Kan æ få bytte rom? Det her passe ikkje.', 'Æ vil gjerne bytte rom, om det går.'],
+  demand: ['Æ vil ha rabatt. Rommet lukte rart.', 'Kan æ få frokost på senga?'],
+  callback: ['Det e mæ igjen. Ingen tok telefonen i stad.', 'Hallo?! Æ ringte for en stund siden!'],
+  r_apology: ['Ja ja. Takk for det, i hvert fall.', 'Ok. Men det løse jo ikkje problemet.'],
+  r_help: ['Takk. Æ vente.', 'Supert, takk.'],
+  r_move_yes: ['Ja takk! Æ kommer ned med nøkkelen.', 'Flott. Æ kommer ned.'],
+  r_refuse: ['Ja vel. Æ hørte.', 'Typisk.'],
+  r_discount: ['Takk. Det hjelpe.'],
+  r_selffix: ['Æ prøve. Om æ finn knotten.'],
+  r_selffix_ok: ['Åh. Den knotten ja. Nu e det varmt.'],
+  r_selffix_fail: ['Den knotten gjør ingenting! Æ fryse fortsatt.'],
+  loud_asked: ['Okei, okei. Vi ska vær stille.', 'Unnskyld. Vi demper oss.'],
+  wake_call: ['Mmmh… ja. Æ e våken. Takk.', 'Å, e det morra allerede? Takk.'],
+  check_call: ['Alt e fint, takk. Men det e midt på natta.', 'Ja, alt e bra. Hvorfor ringe du?'],
+  booking_call: ['Hei, æ ville bestille et rom. {name}. {type}, {nights}. Æ e der rundt {time}.', 'Hallo, har dokker et rom ledig? Det e {name}. {type}, {nights}. Æ kommer rundt {time}.'],
+  booking_ok: ['Takk! Vi ses.', 'Flott. Æ kommer.'],
+  booking_full: ['Fullt? Ja ja. Da får æ finne nåkka anna.'],
+  booking_alt_ok: ['{type}? Ja, det går fint.'],
+  phone_bye: ['Takk. Ha det.', 'God natt.'],
+  // ── Retur til disken ──
+  swap_hello: ['Hei. Æ skulle få bytte rom?', 'Æ kom for å bytte nøkkel.'],
+  swap_done: ['Takk. Da flytte æ.', 'Supert. Nytt rom, nytt liv.'],
+  lost_number: ['Du… ka rom va det æ hadde igjen?', 'Æ har glømt kor æ bor. Ka rom e mitt?'],
+  lost_right: ['Der ja! Takk.', 'Selvfølgelig. Takk.'],
+  lost_wrong: ['Ok, takk.'],
+  lost_angry: ['Du sendte mæ til feil rom! Æ sto og rista i en fremmed dør!'],
+  question: ['Har dokker wifi?', 'Kor e nærmeste bensinstasjon?'],
+  avail_ask: ['Hei, æ bare lure på om dokker har ledige rom {when}?', 'Hallo. Har dokker plass {when}, eller e det fullt?', 'Æ står fast med bilen et stykke unna. Har dokker et rom {when}?', 'Ja hei. Bare et kjapt spørsmål: e det ledig {when}?'],
+  avail_yes: ['Supert. Da kommer æ innom om en liten stund.', 'Fint! Æ e der før du vet ordet av det.', 'Takk, da kjøre æ dit nu.'],
+  avail_no: ['Fullt? Ja ja. Takk likevel.', 'Søren. Da får æ prøve neste plass.', 'Ok. Takk for at du svarte, da.'],
+  extend_phone: ['Du, æ trives så godt her. Kan æ få bli en natt til?', 'Æ har ikkje lyst å kjøre i morra i dette været. Har dokker rommet ledig en natt til?', 'Kan æ forlenge med ei natt? Æ betale når æ går forbi disken.'],
+  question_phone: ['Unnskyld at æ ringe så seint, men æ lure på en ting.', 'Bare et lite spørsmål fra rommet her.', 'Æ ville ikkje gå heilt ned for dette, så æ ringe.'],
+  extend_ask: ['Kan æ bli en natt til?', 'Æ trives. Kan æ forlenge med en natt?'],
+  extend_yes: ['Topp! Æ betale med en gang.'],
+  extend_no: ['Ja ja. Da drar æ i morra.'],
+  return_thanks: ['Takk for hjelpa.'],
+  // ── Diverse ──
+  passing: ['Æ ska bare ut og trekke litt luft.', 'Det e så stille her om natta.'],
+  rare: ['Visste du at det e minus tjue ute?', 'Det e et fint gammelt sted, det her. Lukte litt rart, men fint.'],
+};
+
+// Tekst til spørsmål ved disken og svaralternativ (felles for alle).
+export const QUESTIONS = [
+  {
+    key: 'wifi', ask: ['Har dokker wifi her?', 'Ka e wifi-passordet?'],
+    answers: [
+      { label: 'Vi har ikkje wifi. Det e 1987 her inne.', sat: -1, reply: ['Ikkje wifi?! Ka gjør æ med hendan?'] },
+      { label: 'Prøv «motell69». Uten mellomrom.', sat: 2, reply: ['…Det finnes ikkje noe nett som heter det.', 'Takk! Æ prøve.'] },
+    ],
+  },
+  {
+    key: 'gas', ask: ['Kor e nærmeste bensinstasjon?', 'E det nån bensinstasjon som e åpen nu?'],
+    answers: [
+      { label: 'Tretti kilometer sørover. Stenger klokka elleve.', sat: 2, reply: ['Tretti kilometer. Ja vel. Takk.'] },
+      { label: 'Æ aner ikkje. Æ e ny.', sat: -2, reply: ['Flott. Ny og uvitende.'] },
+    ],
+  },
+  {
+    key: 'breakfast', ask: ['Når e frokosten?', 'Har dokker frokost?'],
+    answers: [
+      { label: 'Det e en kaffeautomat i gangen. Den tar femkroninga.', sat: 1, reply: ['Femkroninga? Ka e det for slags valuta?'] },
+      { label: 'Ingen frokost, beklager.', sat: -1, reply: ['Ja vel. Da blir det sjokolade fra hanskerommet.'] },
+    ],
+  },
+  {
+    key: 'aurora', ask: ['E det nordlys i natt?', 'Kan man se nordlyset herfra?'],
+    answers: [
+      { label: 'Fra andre etasje, når det klarne opp.', sat: 2, reply: ['Åh! Æ ska sjå ut vinduet hele natta.'] },
+      { label: 'Det e bare gatelyset.', sat: -1, reply: ['Du e en skikkelig romantiker, du.'] },
+    ],
+  },
+];
+
+// Ting som kan gå i stykker / ting gjester ber om
+export const BROKEN_ITEMS = ['TV-en', 'lampa på nattbordet', 'dusjen', 'vinduet', 'radioen'];
+export const REQ_ITEMS = ['en ekstra dyne', 'flere håndklær', 'en ekstra pute', 'tannkrem', 'en vekkerklokke'];
